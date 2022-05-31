@@ -7,6 +7,8 @@ public class Main {
 		Scanner scanner = new Scanner(System.in);
 		
 		String user;
+		String isActive[] =  {"Active", "Unactive"};
+		Random random = new Random();
 		
 		System.out.println("======  Menu  =====");
 		System.out.println("1.Enter  ");
@@ -17,6 +19,8 @@ public class Main {
 			System.out.printf("Enter: ");
 			n = scanner.nextInt();
 		}
+		
+		
 		switch(n) {
 		case 1:
 			System.out.println("======  Menu  =====");
@@ -32,11 +36,14 @@ public class Main {
 					System.out.println();
 					user = scanner.next();
 					System.out.println("======  Menu  =====");
-					System.out.println(" Welcome");
 					System.out.println("1.See activity status");
 					System.out.println("2.See sensor status");
 					System.out.println("3.See sensor durability");
+					System.out.printf("Enter: ");
+					n = scanner.nextInt();
+					System.out.println("======  Menu  =====");
 					switch(n) {
+					
 					case 1:
 						int a= 0;
 			
@@ -53,6 +60,33 @@ public class Main {
 						System.out.println(a++ + ". 13:20 2m > clear");
 						System.out.println(a++ + ". 13:40 2m > clear");
 						System.out.println(a++ + ". 14:00 2m > clear");
+					case 2:
+						System.out.println("1.Buzzer");
+						System.out.println("2.Ultra sonic sensor");
+						System.out.println("3.Noise sensor");
+						System.out.println("4.Exit");
+						System.out.printf("Enter: ");
+						n = scanner.nextInt();
+						switch(n) {
+						case 1:
+							int b= 0;
+								System.out.println("");
+								System.out.println("");
+								System.out.println("");
+						}
+					case 3:
+						 int select = random.nextInt(isActive.length); 
+						System.out.println("1.Buzzer is " + isActive[select]);
+						
+						int select1 = random.nextInt(isActive.length); 
+						System.out.println("2.Ultra sonic sensor is " + isActive[select1]);
+
+						 int select2 = random.nextInt(isActive.length); 
+						System.out.println("3.Noise sensor is " + isActive[select2]);
+						
+						System.out.println("4.Exit");
+						System.out.printf("Enter: ");
+						n = scanner.nextInt();
 					}
 			}
 			
@@ -60,8 +94,8 @@ public class Main {
 			System.out.println("======  Menu  =====");
 			System.out.println("Thank you for using our program");
 
-			
-		}
+		 }
+		
 	}
 
 
