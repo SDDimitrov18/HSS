@@ -6,7 +6,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Scanner scanner = new Scanner(System.in);
 		
-		String user;
+		String user, username = " ", password = " ";
 		String isActive[] =  {"Active", "Unactive"};
 		Random random = new Random();
 		
@@ -16,11 +16,19 @@ public class Main {
 		System.out.printf("Enter: ");
 		int n = scanner.nextInt();
 		while(n < 1 || n > 3) {
+			System.out.println("======  Menu  =====");
+			System.out.println("1.Enter  ");
+			System.out.println("2.Exit ");
 			System.out.printf("Enter: ");
 			n = scanner.nextInt();
 		}
 		
-		
+		while(n >= 1 && n <=3 || n != 2) {
+			if(n == 2 || n == 4) {
+				System.out.println("======  Menu  =====");
+				System.out.println("Thank you for using our program");
+				break;
+			}
 		switch(n) {
 		case 1:
 			System.out.println("======  Menu  =====");
@@ -32,7 +40,7 @@ public class Main {
 			n = scanner.nextInt();
 			switch(n) {
 				case 1:
-					System.out.println("Please enter your username: ");
+					System.out.printf("Please enter your username: ");
 					System.out.println();
 					user = scanner.next();
 					System.out.println("======  Menu  =====");
@@ -88,7 +96,6 @@ public class Main {
 						System.out.printf("Enter: ");
 						n = scanner.nextInt();
 					}
-			}
 			
 		case 2:
 			System.out.println("======  Menu  =====");
@@ -97,7 +104,7 @@ public class Main {
 		 }
 		
 	}
-
+	}
 
 	
 
